@@ -3,6 +3,7 @@ public class books{
     public static void main(String[] args) {
         book Anna_Karenina = new book();
         book War_And_Peace = new book();
+        book Resurrection = new book("Resurrection","000003","Leo_Tolstoy");
         Anna_Karenina.setName("Anna_Karenina");
         Anna_Karenina.setBook_number("000001");
         Anna_Karenina.setAuthor("Leo_Tolstoy");
@@ -11,6 +12,7 @@ public class books{
         War_And_Peace.setAuthor("Leo_Tolstoy");
         print(Anna_Karenina);
         print(War_And_Peace);
+        print(Resurrection);
     }
     public static void print(book A) {
         System.out.println("\t");
@@ -26,6 +28,13 @@ class book {
     public String book_number;
     public String author;
 
+    public book(){
+    }
+    public book(String name,String book_number,String author){
+        this.name = name;
+        this.book_number = book_number;
+        this.author = author;
+    }
     public void setName(String name){
         this.name = name;
     }
