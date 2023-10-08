@@ -2,29 +2,47 @@
 public class books{
     public static void main(String[] args) {
         book Anna_Karenina = new book();
-        Anna_Karenina.name = "Anna_Karenina";
-        Anna_Karenina.book_number = "000001";
-        Anna_Karenina.type = "Novel";
-        Anna_Karenina.author = "Leo_Tolstoy";
-        Anna_Karenina.borrowers = "Elster_Belwood";
-        Anna_Karenina.words_number = 607000;
+        book War_And_Peace = new book();
+        Anna_Karenina.setName("Anna_Karenina");
+        Anna_Karenina.setBook_number("000001");
+        Anna_Karenina.setAuthor("Leo_Tolstoy");
+        War_And_Peace.setName("War_And_Peace");
+        War_And_Peace.setBook_number("000002");
+        War_And_Peace.setAuthor("Leo_Tolstoy");
         print(Anna_Karenina);
+        print(War_And_Peace);
     }
-    public static void print(book Anna_Karenina) {
-        System.out.println(Anna_Karenina.name);
-        System.out.println(Anna_Karenina.book_number);
-        System.out.println(Anna_Karenina.type);
-        System.out.println(Anna_Karenina.author);
-        System.out.println(Anna_Karenina.borrowers);
-        System.out.println(Anna_Karenina.words_number);
+    public static void print(book A) {
+        System.out.println("\t");
+        System.out.println(A.getBook_number());
+        System.out.println(A.getName());
+        System.out.println(A.getAuthor());
+
     }
 }
 
 class book {
     public String name;
     public String book_number;
-    public String type;
     public String author;
-    public String borrowers;
-    public int words_number;
+
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setBook_number(String number){
+        this.book_number = number;
+    }
+    public void setAuthor(String author){
+        this.author = author;
+    }
+    public String getName(){
+        return this.name;
+    }
+    public String getBook_number(){
+        return this.book_number;
+    }
+    public String getAuthor(){
+        return this.author;
+    }
 }
+
